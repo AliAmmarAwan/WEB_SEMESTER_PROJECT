@@ -27,12 +27,13 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 // import routes
 
-const coupon = require("./controller/coupounCode");
-const conversation = require("./controller/conversation");
+const event = require("./controller/event");
+const message = require("./controller/message");
 
 
-app.use("/api/v2/conversation", conversation);
-app.use("/api/v2/coupon", coupon);
+
+app.use("/api/v2/message", message);
+app.use("/api/v2/event", event);
 
 
 // it's for ErrorHandling
